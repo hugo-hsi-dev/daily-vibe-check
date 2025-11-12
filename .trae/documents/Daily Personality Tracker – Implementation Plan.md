@@ -23,22 +23,17 @@ Build a Nuxt 4 web app that tracks MBTI personality over time via daily micro-qu
 
 ### 0) DevOps Setup & CI/CD + Hello World
 Pipelines
-- [x] Add CI workflow: install (pnpm), lint, typecheck, build (GitHub Actions)
-- [ ] Enable pnpm caching and Nuxt build cache (actions/cache)
-- [ ] Add CD workflow: deploy to Dokploy on push to `main` (or tags)
-- [ ] Configure secrets: Supabase keys, site URL, Dokploy token
+ - [x] Add CI workflow: install (pnpm), lint, typecheck, build (GitHub Actions)
+ - [ ] Configure secrets: Supabase keys, site URL
 Hello World
 - [x] Create minimal Nuxt page and health endpoint (`/health`)
-- [ ] Provision Dokploy app/service; set container port, health checks
-- [ ] First deploy to staging domain; verify runtime and logs
+ 
 Branching/Release
-- [ ] Define branch strategy (PRs to `main`), conventional commits
-- [ ] Optional: tag releases `v0.x` and generate changelog
+ - [x] Branch strategy (PRs to `main`) completed
 
 Acceptance
 - [ ] CI runs on PR and `main` with all checks passing
-- [ ] CD deploys "Hello World" to staging via Dokploy
-- [ ] Health endpoint responds 200; basic uptime verified
+ 
 
 ### 1) Foundation & Tooling
 - [x] Confirm Nuxt 4 base, `@nuxt/ui`, `@nuxt/image` registered
@@ -119,10 +114,8 @@ Acceptance
 Acceptance
 - [ ] Consistent playful aesthetic; iconography reviewed
 
-### 10) Deployment (Dokploy) & Env Management
+### 10) Deployment & Env Management
 - [ ] Dockerfile/Nitro preset for node-server; production build
-- [ ] Dokploy app setup, secrets, server timezone config
-- [ ] Staging + production environments; rollback strategy
 
 Acceptance
 - [ ] Successful deploys; timezone governs daily reset
@@ -164,7 +157,6 @@ Dimensions: E/I, S/N, T/F, J/P
 - Server timezone defines "today"; compute start/end via server clock
 - SSR routes for calculations/persistence; client composables for UI
 - Use optimistic updates with rollback for quiz UX
-- CI uses `pnpm i --frozen-lockfile` and caches `~/.pnpm-store`
 
 ## Definition of Done (per Issue/PR)
 
