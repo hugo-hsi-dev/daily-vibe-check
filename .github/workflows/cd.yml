@@ -23,25 +23,12 @@ jobs:
         run: pnpm i --frozen-lockfile
       - name: Build
         run: pnpm build
-      - name: Log in to GHCR
-        uses: docker/login-action@v3
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build and push image
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          push: true
-          tags: ghcr.io/${{ github.repository }}:${{ github.sha }}
       - name: Trigger Dokploy deployment
         env:
           DOKPLOY_WEBHOOK_URL: ${{ secrets.DOKPLOY_WEBHOOK_URL }}
           DOKPLOY_TOKEN: ${{ secrets.DOKPLOY_TOKEN }}
-          IMAGE_TAG: ghcr.io/${{ github.repository }}:${{ github.sha }}
         run: |
           curl -s -X POST "$DOKPLOY_WEBHOOK_URL" \
             -H "Authorization: Bearer $DOKPLOY_TOKEN" \
             -H "Content-Type: application/json" \
-            -d "{\"image\": \"$IMAGE_TAG\"}"
+            -d '{}'
