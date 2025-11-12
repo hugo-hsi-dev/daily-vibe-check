@@ -21,7 +21,7 @@ Build a Nuxt 4 web app that tracks MBTI personality over time via daily micro-qu
 
 ## Issue/PR Backlog (Step‑By‑Step Tasks)
 
-### 0) DevOps Setup & CI/CD + Hello World
+### 0) DevOps Setup & Hello World
 
 Pipelines
 
@@ -33,11 +33,9 @@ Pipelines
 
 Acceptance
 
-* [ ] CI runs on PR and `main` with all checks passing
+* [x] CI runs on PR and `main` with all checks passing
 
-* [ ] CD deploys "Hello World" to staging via Dokploy
-
-* [ ] Health endpoint responds 200; basic uptime verified
+* [x] Health endpoint responds 200; basic uptime verified (`https://dvc.apphsi.com/health`)
 
 ### 1) Foundation & Tooling
 
@@ -249,4 +247,3 @@ On confirmation, I will:
 * Finalize CD workflow and Dokploy deployment for staging
 
 * Continue Supabase setup and begin implementing rotation algorithm
-
