@@ -1,8 +1,0 @@
-node_modules
-.output
-.nuxt
-.vscode
-.git
-Dockerfile*
-README.md
-*.log
