@@ -8,6 +8,10 @@
   </section>
 </template>
 
+<script setup>
+defineOptions({ name: 'HomePage' })
+</script>
+
 <style scoped>
 .container { display: grid; gap: 16px; padding: 24px; }
 h1 { font-size: 24px; }
