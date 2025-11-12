@@ -23,12 +23,12 @@ Build a Nuxt 4 web app that tracks MBTI personality over time via daily micro-qu
 
 ### 0) DevOps Setup & CI/CD + Hello World
 Pipelines
-- [ ] Add CI workflow: install (pnpm), lint, typecheck, unit tests, build (GitHub Actions)
+- [x] Add CI workflow: install (pnpm), lint, typecheck, build (GitHub Actions)
 - [ ] Enable pnpm caching and Nuxt build cache (actions/cache)
 - [ ] Add CD workflow: deploy to Dokploy on push to `main` (or tags)
 - [ ] Configure secrets: Supabase keys, site URL, Dokploy token
 Hello World
-- [ ] Create minimal Nuxt page and health endpoint (`/health`)
+- [x] Create minimal Nuxt page and health endpoint (`/health`)
 - [ ] Provision Dokploy app/service; set container port, health checks
 - [ ] First deploy to staging domain; verify runtime and logs
 Branching/Release
@@ -41,8 +41,8 @@ Acceptance
 - [ ] Health endpoint responds 200; basic uptime verified
 
 ### 1) Foundation & Tooling
-- [ ] Confirm Nuxt 4 base, `@nuxt/ui`, `@nuxt/image` registered
-- [ ] Establish structure: `pages`, `components`, `composables`, `server/routes`
+- [x] Confirm Nuxt 4 base, `@nuxt/ui`, `@nuxt/image` registered
+- [x] Establish structure: `pages`, `components`, `composables`, `server/routes`
 - [ ] ESLint + TypeScript strict; precommit formatting (lint-staged)
 - [ ] Basic CI checks validated
 
@@ -144,12 +144,12 @@ Acceptance
 Acceptance
 - [ ] Chart correctness and smooth mobile interactions
 
-### 13) Progress Tracker Markdown
-- [ ] Create `/PROJECT_PROGRESS.md` with checklist per issue/PR (Todo/In‑Progress/Done)
+### 13) Project Plan Document
+- [ ] Maintain `.trae/documents/Daily Personality Tracker – Implementation Plan.md` with checklist per issue/PR (Todo/In‑Progress/Done)
 - [ ] Update on merge via CI or manual to reflect latest state
 
 Acceptance
-- [ ] File reflects latest merged status; easy to scan
+- [ ] Plan reflects latest merged status; easy to scan
 
 ## Data Model Draft
 
@@ -177,5 +177,5 @@ Dimensions: E/I, S/N, T/F, J/P
 ## Next Step
 
 On confirmation, I will:
-- Add CI/CD workflows and deploy the Hello World to Dokploy
-- Generate `/PROJECT_PROGRESS.md` and begin tracking progress
+- Finalize CD workflow and Dokploy deployment for staging
+- Continue Supabase setup and begin implementing rotation algorithm
